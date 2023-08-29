@@ -46,7 +46,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import sqlConnect.JBDCUtil;
 
-public class runJBDCUtil8===     {
+public class runJBDCUtil{
 
 	public static void main(String[] args) {
 		try {
