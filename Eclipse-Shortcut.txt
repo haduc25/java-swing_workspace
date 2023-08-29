@@ -1,0 +1,2 @@
+Ctrl + Alt + Down Arrow //duplicate a line
+Alt + Shift + Z //add try/catch block
