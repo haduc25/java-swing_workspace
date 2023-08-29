@@ -72,6 +72,31 @@ public class ConnectDemo {
     		
     	}
     }
+    
+    public void updateData(int _id, int _idDm, String _tenSp, String _subTenSp, String _imgSp, int _soLuongSP) {
+    	String sql = "UPDATE `products` SET `id_dm`=?,`ten_sp`=?,`sub_ten_sp`=?,`img_sp`=?,`sl_sp`=? WHERE `id_sp`=?";
+		
+    	if(con!=null) {
+    		try {
+				PreparedStatement ps = con.prepareStatement(sql);
+				
+				ps.setInt(1, _idDm);
+				ps.setString(2, _tenSp);
+				ps.setString(3, _subTenSp);
+				ps.setString(4, _imgSp);
+				ps.setInt(5, _soLuongSP);
+				ps.setInt(6, _id);
+				
+				ps.executeUpdate();
+				ps.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+    	}
+    	
+    }
+    
 
     public static void main(String[] args) {
         ConnectDemo demo = new ConnectDemo();
@@ -80,15 +105,17 @@ public class ConnectDemo {
             demo.showData(rs);
             
             System.out.println("====== INSERT ======");
-            demo.insertData(12, 2, "iPhone 11", "meow", "images/iphone11.png", 999);
+//            demo.insertData(12, 2, "iPhone 11", "meow", "images/iphone11.png", 999);
+            demo.updateData(12, 2, "iPhone 12", "meow2", "images/iphone12.png", 998);
             
-            System.out.println("====== Dữ liệu sau khi INSERT ======");
+            System.out.println("====== Dữ liệu sau khi INSERT, UPDATE ======");
             
             // Fetch the data again after the insert operation
             ResultSet updatedRs = demo.getData();
             if (updatedRs != null) {
                 demo.showData(updatedRs);
             }
+            
         }
     }
 }
