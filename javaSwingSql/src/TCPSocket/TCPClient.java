@@ -16,6 +16,7 @@ public class TCPClient {
 				String data = br.readLine();
 				System.out.println("Data from Server: " + data);
 			}
+//			client.close();
 		} catch (UnknownHostException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
