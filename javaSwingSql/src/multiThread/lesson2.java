@@ -1,4 +1,4 @@
-package multiThread;
+package multiThread; // VD1.java
 
 import javax.swing.JFrame;
 
