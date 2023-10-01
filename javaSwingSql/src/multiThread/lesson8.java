@@ -1,8 +1,15 @@
-package multiThread;
+package multiThread; //YieldThreadExample.java
 
-import java.util.Date;
+import java.util.Date; 
 
-//YieldThreadExample.java
+/* @Override
+ * Override trong Java là gì? Overriding là một tính năng trong lập trình hướng đối tượng Java, 
+ * cho phép một lớp con cung cấp một định nghĩa mới cho một phương thức đã được định nghĩa trong lớp cha của nó. 
+ * Quá trình này giúp lớp con mở rộng hoặc thay đổi hành vi của lớp cha mà không làm thay đổi mã nguồn của lớp cha.
+ * 
+ * 
+ * 
+ */
 
 public class lesson8 {
 	private static Date importantEndTime;
