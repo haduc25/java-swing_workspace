@@ -3,7 +3,7 @@ package JDBC; //ConnectionDatabase.java
 import java.sql.*;
 import java.sql.Connection;
 
-public class bai2_CRUD {
+public class ConnectionDatabase {
 	private final String className = "com.mysql.jdbc.Driver";
     private final String url = "jdbc:mysql://localhost:3307/db_qlsv";
     private final String user = "root";
@@ -171,7 +171,7 @@ public class bai2_CRUD {
 
     
 	public static void main(String[] args) {
-		bai2_CRUD crud = new bai2_CRUD();
+		ConnectionDatabase crud = new ConnectionDatabase();
 		crud.initConnection();
 		crud.showData(crud.getAllData());
 
